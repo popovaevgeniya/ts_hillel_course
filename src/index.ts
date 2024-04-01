@@ -204,6 +204,10 @@ class Student {
     this._visits.push(isVisit);
   }
 
+  setGrade(newGrade: GradeType): void {
+    Object.assign(this._grades, newGrade);
+  }
+
   getPerformanceRating(): number {
     const gradeValues: markType[] = Object.values(this._grades);
 
