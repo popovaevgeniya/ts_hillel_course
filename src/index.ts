@@ -85,6 +85,10 @@ class Level {
     return this._name;
   }
 
+  get description(): string {
+    return this._description;
+  }
+
   get groups(): GroupType[] {
     return this._groups;
   }
@@ -194,6 +198,10 @@ class Student {
     this._firstName = firstName;
     this._lastName = lastName;
     this._birthYear = birthYear;
+  }
+
+  setVisit(isVisit: boolean): void {
+    this._visits.push(isVisit);
   }
 
   getPerformanceRating(): number {
