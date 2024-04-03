@@ -190,6 +190,14 @@ class Student {
     [this._lastName, this._firstName] = value.split(' ');
   }
 
+  set visits(isVisit: boolean) {
+    this._visits.push(isVisit);
+  }
+
+  set grades(newGrade: GradeType) {
+    Object.assign(this._grades, newGrade);
+  }
+
   get age(): number {
     return new Date().getFullYear() - this._birthYear;
   }
@@ -198,14 +206,6 @@ class Student {
     this._firstName = firstName;
     this._lastName = lastName;
     this._birthYear = birthYear;
-  }
-
-  setVisit(isVisit: boolean): void {
-    this._visits.push(isVisit);
-  }
-
-  setGrade(newGrade: GradeType): void {
-    Object.assign(this._grades, newGrade);
   }
 
   getPerformanceRating(): number {
